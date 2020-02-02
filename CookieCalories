@@ -1,0 +1,55 @@
+//***************************************
+//C++
+//Levi McCann
+//02/2/2020
+//Cookie Calories Program 3-9
+//CIS61 Hendrickson
+//***************************************
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+ {
+ // declare const variables first
+ const int COOKIES_PER_BAG = 30,
+           SERVINGS_PER_BAG = 10,
+           CALORIES_PER_SERVING = 300;
+  //declare variables
+  float cookies_eaten,
+        servings_eaten,
+        calories_consumed,
+        cookies_per_serving = COOKIES_PER_BAG / SERVINGS_PER_BAG;
+  //Ask user how many cookies servings_eaten
+  cout << endl ;
+  cout <<"How many cookies did you eat? ";
+  cin >> cookies_eaten ;
+  //calculate number of servings_eaten
+  servings_eaten = cookies_eaten / cookies_per_serving;
+  //calculate calories consumed
+  calories_consumed = servings_eaten * CALORIES_PER_SERVING;
+
+  //display output make display nice and evenly justified
+  cout << '\n' <<setprecision(2) << fixed << right;
+  cout <<"Number of Cookies per bag        = ";
+  cout <<setw(8) << COOKIES_PER_BAG    << endl;
+  cout <<"Number of servings per bag       = ";
+  cout <<setw(8) << SERVINGS_PER_BAG   << endl;
+  cout <<"Number of calories per serving   = ";
+  cout <<setw(8) << CALORIES_PER_SERVING<<endl;
+  cout <<"Number of Cookies per serving    = ";
+  cout <<setw(8) <<cookies_per_serving  <<endl;
+  cout <<"Number of cookies eaten          = ";
+  cout <<setw(8) <<cookies_eaten        <<endl;
+  cout <<"Number of servings eaten         = ";
+  cout <<setw(8) <<servings_eaten       <<endl;
+  cout <<"Number of calories consumed      = ";
+  cout <<setw(8) <<calories_consumed    <<endl;
+
+
+
+
+//  std::cout << "Hello World!\n";
+return 0;
+}
