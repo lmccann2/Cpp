@@ -1,0 +1,31 @@
+//********************************
+//Levi McCann
+//02/2/20
+// Miles Per Gallon 3-1
+//CIS 61 Hendrickson
+//********************************
+
+#include <iostream>
+using namespace std;
+
+
+int main()
+ {
+   //Declaring define variables
+   double gallons, miles;
+   
+   //get user input
+   cout << "Enter the number of gallons: ";
+   cin >> gallons ;
+   cout << "Enter the number of miles driven on full tank: ";
+   cin >> miles ;
+
+   //calculate miles per gallon
+   double mpg = miles / gallons ;
+   //Print output of calculation to display
+   cout << "Your gas mileage is: " <<  mpg << " mpg." << endl ; 
+
+
+   //System("pause");
+//  std::cout << "Hello World!\n";
+   return 0;
