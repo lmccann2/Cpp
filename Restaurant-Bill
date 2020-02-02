@@ -1,0 +1,41 @@
+//*******************************
+//C++
+//Levi McCann
+//02/02/2020
+//CIS 62 Hendrickson
+//Restaurant Bill JP2.13
+//*******************************
+
+#include <iostream>
+//include to format precision in decimals
+#include <iomanip>
+#include <string>  //included but not needed in this program
+using namespace std;
+
+
+int main() {
+  //declare variables
+  double mealCost;
+  cout <<"What was the cost of the meal? " <<endl;
+  cin >> mealCost;
+  //Setting the double to print correctly with setprecision and fixed
+  cout <<fixed;
+  cout <<setprecision(2) ;
+  const double TAX = mealCost * .075;
+  double subTotal = mealCost + TAX;
+  double tip = subTotal * .20;
+  double total = subTotal + tip;
+
+
+  double totalTax =mealCost * TAX;
+  double tips = subTotal * .20;
+
+//display the output to the screen after calculations
+  cout <<"The meal cost was " <<mealCost <<endl;
+  cout <<"The Tax is " <<TAX <<endl;
+  cout <<"The tip should be: " <<tips <<endl;
+  cout <<"Your total is: " <<total <<endl;
+
+  return 0; 
+  //std::cout << "Hello World!\n";
+}
